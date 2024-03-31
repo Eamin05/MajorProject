@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Unicorn Bank</title>
+    <title>Login | Unicorn Bank</title>
     <!-- Linking bootstrap css file -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <!-- Linking fontawsome css file -->
     <link rel="stylesheet" href="css/fontawsome/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Linking the default.css file -->
     <link rel="stylesheet" href="css/default.css">
     <!-- Linking Google fonts -->
@@ -15,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
-<body class="align-items-center">
+<body class="justify-content-center">
     <!-- Navigation Bar -->
     <header class="d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center logo">
@@ -34,27 +35,37 @@
         </nav>
     </header>
     <!-- end of Navigation Bar -->
-    <!-- Main page Intro card -->
-    <div id="intro-card" class="d-flex align-items-center card col-6 bg-transparent border-0" >
-        <!-- Card content -->
-        <div class="card-body">
-            <!-- Card heading -->
-            <h5 class="mb-3">Start Your Financial Journey with Us</h5>
-            <!-- end of Card heading -->
-            <!-- Card body -->
-            <p class="card-body">
-                At Unicorn Bank, we believe in making your banking experience seamless, secure, and convenient. Our user-friendly application offers a wide range of features and services to meet all your banking needs. Whether you want to manage your accounts, transfer funds, pay bills, or apply for loans, we've got you covered. <br>
-                Join us today and discover a banking experience where convenience, security, and innovation come together. Download our app now and embark on a journey of seamless financial management.
+    <!-- Login card -->
+    <div class="d-flex justify-content-center align-items-center card login-form-card col-4 bg-transparent border-0">
+        <!-- Card body -->
+        <div class="login-card-body">
+            <!-- Login heading -->
+            <h1 class="form-header card-title mb-3 text-white">
+                <i class="fa fa-user-circle"></i> Login
+            </h1>
+            <!-- end of Login heading -->
+            <!-- Form -->
+            <form action="" class="login-form">
+                <div class="form-group col mb-4">
+                    <input type="number" name="userID" class="form-control" placeholder="User ID / Customer ID"/>
+                </div>
+                <div class="form-group col mb-4">
+                    <input type="password" name="password" class="form-control" placeholder="Password"/>
+                </div>
+                <div class="form-group col mb-4">
+                    <button class="btn">Login</button>
+                </div>
+            </form>
+            <!-- Form -->
+            <!-- Already acc present card -->
+            <p class="acc-card-text my-2 text-white">
+                Don't have an account?<span class="ms-2 login-link"><a href="register.html">Sign Up</a></span> here!
             </p>
-            <!-- end of Card body -->
-            <div class="button-wrapper d-flex align-items-center">
-                <a href="register.html" class="btn btn-md register" role="button">Register</a>
-                <a href="login.html" class="btn btn-md login" role="button">Login</a>
-            </div>
+            <!-- Already acc present card -->
         </div>
-        <!-- end of Card content -->
+        <!-- end of Card body -->
     </div>
-    <!-- end of Main page Intro card -->
+    <!-- end of Login card -->
     <!-- Footer start -->
     <footer>Copyright &copy; 2024 <br>Made by: Eamin Khan & Aman Wadgaonkar</footer>
     <!-- end of Footer -->
