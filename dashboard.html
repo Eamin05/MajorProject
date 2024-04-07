@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- Linking dashboard css -->
     <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Linking js files for offcanvas to work -->
+    <script src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
     <!-- user Main pg header -->
@@ -37,7 +39,7 @@
             <!-- end of Navigation bar -->
             <!-- display user name -->
             <div class="display-name ms-auto">
-                <i class="fa fa-circle text-success me-2"></i>Welcome <span>User name</span>
+                <i class="fa fa-circle text-success me-2"></i>Welcome <span>Test</span>
             </div>
             <!-- end of display user name -->
             <!-- log out btn -->
@@ -47,5 +49,110 @@
         </div>
     </header>
     <!-- end of user Main pg header -->
+    <!-- start of transact body -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Transact</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- dropdown -->
+            <small class="card-text">
+                Choose an option below to perform transaction:
+            </small>
+            <select name="transact-type" id="" class="form-control my-3">
+                <option value="">-- Select transaction type --</option>
+                <option value="payment">Payment</option>
+                <option value="transfer">Transfer</option>
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+            </select>
+            <!-- end of dropdown -->
+            <!-- payment card -->
+            
+            <!-- end of payment card -->
+        </div>
+    </div>
+    <!-- end of transact body -->
+    
+    <!-- start of accounts form container -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasTopLabel">Offcanvas top</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          ...
+        </div>
+      </div>
+    <!-- end of accounts form container -->
+    <!-- container -->
+    <div class="container d-flex justify-content-between">
+        <button id="add-acc-btn" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <i class="fa fa-credit-card me-2"></i> Add new account
+        </button>
+            
+        <button id="add-acc-btn" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            <i class="fa fa-wallet me-2"></i> Transact
+        </button>
+    </div>
+    <!-- end of container -->
+    <!-- total balance display -->
+    <div class="container d-flex py-2">
+        <h2 class="me-auto">Total balance:</h2>
+        <h2 class="ms-auto">0.00</h2>
+    </div>
+    <!-- end of total balance display -->
+    <!-- Container: dropdown menu -->
+    <div class="container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Accordion Item #3
+                </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of container: dropdown menu -->
+      <!-- container: no of accounts -->
+      <div class="container">
+        <div class="card no-acc">
+            <div class="card-body">
+                <h1 class="card-title">
+                    <i class="fa fa-ban text-danger"></i> No Accounts Registered
+                </h1>
+                <hr>
+                <div class="card-text">
+                    You currently have no registered accounts.
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- end of container: no of accounts -->
 </body>
 </html>

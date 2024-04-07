@@ -37,7 +37,38 @@ body{
     text-decoration: none;
 }
 
+.navigation li a:hover{
+    color: #5a47cd;
+    font-weight: 600;
+}
+
 /* display user name style */
 .display-name{
     font-weight: bold;
+}
+
+/* Transact button styles */
+#transact-btn{
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0px 3px 6px #29e2f8;
+    font-weight: bold;
+}
+
+/* Add account button */
+#add-acc-btn{
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0px 3px 6px #29e2f8;
+    font-weight: bold;
+}
+
+/* offcanvas styling */
+.offcanvas{
+    background-color: #d1cfe5;
+}
+
+/* dropdown menu / accordian */
+.container{
+    margin: 20px auto;
 }
