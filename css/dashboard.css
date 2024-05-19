@@ -1,3 +1,11 @@
+.offcanvas {
+    z-index: 1050; /* Adjust this value based on your needs */
+}
+.overlay {
+    z-index: 1040; /* Below the offcanvas if you want it visible but behind the offcanvas */
+    display: none;
+}
+
 *{
     box-sizing: border-box;
     font-family: "Mulish", sans-serif;
@@ -71,4 +79,30 @@ body{
 /* dropdown menu / accordian */
 .container{
     margin: 20px auto;
+}
+
+/* Payment button */
+#payment-btn{
+    padding: 5px;
+    width: 100px;
+    box-shadow: 0px 3px 6px #29e2f8;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* payment card */
+.payment-card{
+    display: none;
+}
+
+.transfer-card{
+    display: none;
+}
+
+.deposit-card{
+    display: none;
+}
+
+.withdraw-card{
+    display: none;
 }
